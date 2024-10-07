@@ -66,8 +66,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-        yarn install --ignore-scripts --force
-        #npm install --force --ignore-scripts gifsicle
-        #cd packages/react-devtools-extensions
-        #npm install --force
+        npm install --force --ignore-scripts gifsicle
+        
+    - run : |  
+        cd packages/react-devtools-extensions
+        npm install --force
 
